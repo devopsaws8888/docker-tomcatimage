@@ -1,8 +1,6 @@
 FROM tomcat:8.0-alpine
 LABEL maintainer="Raja"
 WORKDIR /opt
-RUN apt-get update -y
-RUN apt-get upgrade -y
 COPY tomcat-users.xml /usr/local/tomcat/conf/
 COPY context.xml /usr/local/tomcat/webapps/manager/META-INF/
 EXPOSE 8080
